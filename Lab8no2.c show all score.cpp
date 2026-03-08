@@ -20,6 +20,13 @@ int main() {
         printf("std %d => %d\n", (i+1), checkscore(ans[i]));
     }
     
+    int count_q1_correct = 0;
+    for(i = 0; i < 8; i++) {
+        if(ans[i][0] == keys[0]) {
+            count_q1_correct++;
+        }
+    }
+    printf("Number of students who answered question 1 correctly: %d\n", count_q1_correct);
     
     return 0;
 }
