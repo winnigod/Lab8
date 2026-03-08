@@ -28,6 +28,27 @@ int main() {
     }
     printf("Number of students who answered question 1 correctly: %d\n", count_q1_correct);
     
+	int correct_count[10] = {0};
+    
+    for(int q = 0; q < 10; q++) {
+        for(i = 0; i < 8; i++) {
+            if(ans[i][q] == keys[q]) {
+                correct_count[q]++;
+            }
+        }
+    }
+ 	int min_correct = 9;
+    int hardest_question = 0;
+    
+    for(int q = 0; q < 10; q++) {
+        if(correct_count[q] < min_correct) {
+            min_correct = correct_count[q];
+            hardest_question = q;
+        }
+    }
+    
+    printf("\nHardest question is Question %d (%d students correct)\n", hardest_question+1, min_correct);
+    
     return 0;
 }
 
