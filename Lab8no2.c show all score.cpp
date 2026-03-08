@@ -47,7 +47,6 @@ int main() {
             hardest_question = q;
         }
     }
-    
     printf("\nHardest question is Question %d (%d students correct)\n", 
            hardest_question+1, min_correct);
     
@@ -64,4 +63,5 @@ int checkscore(char std[]) {
         }
     }
     return score;
+
 }
